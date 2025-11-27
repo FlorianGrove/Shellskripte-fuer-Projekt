@@ -1,0 +1,3 @@
+#Ändern der Serverzeit auf extern (Eingabeaufforderung)
+
+w32tm /config /computer:FG-DC-01.uhde.global /manualpeerlist:ch.ntp.pool.org /syncfromflags:manual /update

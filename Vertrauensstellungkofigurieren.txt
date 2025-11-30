@@ -1,0 +1,3 @@
+#Powershell
+
+New-ADTrust -Name "DomäneB" -SourceForest "DomäneA" -TargetForest "DomäneB" -Direction Bidirectional -TrustType Forest

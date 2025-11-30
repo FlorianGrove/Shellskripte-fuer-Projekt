@@ -1,0 +1,14 @@
+
+# Importiere das Active Directory Modul - Muss nur einmal pro Sitzung gemacht werden
+Import-Module ActiveDirectory
+
+$OUPath = "DC=deineFirma,DC=local
+ 
+# Gruppe erstellen
+$GroupName = "IT-Mitarbeiter"
+New-ADGroup -Name $GroupName -GroupScope Global -GroupCategory Security -Path $OUFullPath
+Write-Host "Gruppe '$GroupName' wurde erstellt."
+
+
+# Benutzer zur Gruppe hinzufügen
+Add-ADGroupMember -Identity $GroupName -Members "mmustermann"

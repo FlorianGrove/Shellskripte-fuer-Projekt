@@ -1,0 +1,19 @@
+#PowerShell als DomänenAdmin auf Client ausführen(ManagementClient)
+
+#Installiert ActiveDirectory RSAT-Modul
+
+Add-WindowsCapability -Online -Name RSat.ActiveDirectory.DS-LDS.Tools~~~~0.0.1.0
+
+#Installiert DHCP RSAT-Modul
+
+Add-WindowsCapability -Online -Name RSat.DHCP.Tools~~~~0.0.1.0
+
+#Installiert DNS RSAT-Modul
+
+Add-WindowsCapability -Online -Name RSat.DNS.Tools~~~~0.0.1.0
+
+#Installiert Servermanagement RSAT-Modul
+
+Add-WindowsCapability -Online -Name RSat.ServerManager.Tools~~~~0.0.1.0
+
+

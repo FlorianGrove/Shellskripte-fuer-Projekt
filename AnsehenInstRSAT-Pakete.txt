@@ -1,0 +1,3 @@
+#PowerShell als DomänenAdmin auf Client ausführen(ManagementClient) 
+
+Get-WindowsCapability -Name RSAT* -online | Select-Object -Property DisplayName, State

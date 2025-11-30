@@ -1,0 +1,17 @@
+
+# Importiere das Active Directory Modul
+Import-Module ActiveDirectory
+
+
+# Benutzer erstellen
+$UserName = "Max.Mustermann"
+$Password = ConvertTo-SecureString "P@ssw0rd!" -AsPlainText -Force
+New-ADUser -Name $UserName `
+           -GivenName "Max" `
+           -Surname "Mustermann" `
+           -SamAccountName "mmustermann" `
+           -UserPrincipalName "mmustermann@deineFirma.local" `
+           -AccountPassword $Password `
+           -Enabled $true `
+           -Path $OUFullPath
+Write-Host "Benutzer '$UserName' wurde erstellt."

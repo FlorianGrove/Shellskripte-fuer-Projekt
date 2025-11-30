@@ -1,0 +1,12 @@
+
+# Importiere das Active Directory Modul
+Import-Module ActiveDirectory
+
+# --- Parameter ---
+$OUName = "IT-Abteilung"
+$OUPath = "DC=deineFirma,DC=local"
+$OUFullPath = "OU=$OUName,$OUPath"
+
+# OU erstellen
+New-ADOrganizationalUnit -Name $OUName -Path $OUPath -ProtectedFromAccidentalDeletion $true
+Write-Host "OU '$OUName' wurde erstellt."
